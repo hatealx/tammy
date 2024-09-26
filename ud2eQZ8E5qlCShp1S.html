@@ -1,0 +1,207 @@
+<html><head><base href="https://john-doe-ai.example.com/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>John Doe - AI Enthusiast & Professional</title>
+<style>
+    :root {
+        --primary-color: #1a237e;
+        --secondary-color: #3949ab;
+        --accent-color: #00bcd4;
+        --text-color: #212121;
+        --light-text: #ffffff;
+        --background-color: #f5f5f5;
+    }
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    header {
+        background-color: var(--primary-color);
+        color: var(--light-text);
+        padding: 40px 0;
+        text-align: center;
+    }
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--accent-color);
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin: 10px 0;
+    }
+    .subtitle {
+        font-size: 1.2em;
+        color: var(--accent-color);
+    }
+    .links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 30px 0;
+    }
+    .link {
+        background-color: var(--secondary-color);
+        color: var(--light-text);
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+    }
+    .link:hover {
+        background-color: var(--accent-color);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .link i {
+        margin-right: 8px;
+    }
+    .video-section {
+        margin: 40px 0;
+    }
+    .video-title {
+        font-size: 1.5em;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 600px;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    footer {
+        background-color: var(--primary-color);
+        color: var(--light-text);
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        .subtitle {
+            font-size: 1em;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="john-doe-photo.jpg" alt="John Doe's professional headshot" class="profile-photo" width="150" height="150">
+            <h1>John Doe</h1>
+            <p class="subtitle">AI Enthusiast & Professional</p>
+        </div>
+    </header>
+    <main class="container">
+        <nav class="links">
+            <a href="https://www.linkedin.com/in/johndoe" class="link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i>LinkedIn</a>
+            <a href="https://github.com/johndoe" class="link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>GitHub</a>
+            <a href="https://twitter.com/johndoe" class="link" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i>Twitter</a>
+            <a href="/portfolio" class="link"><i class="fas fa-briefcase"></i>Portfolio</a>
+            <a href="/blog" class="link"><i class="fas fa-blog"></i>Blog</a>
+            <a href="mailto:john.doe@example.com" class="link"><i class="fas fa-envelope"></i>Contact</a>
+        </nav>
+        
+        <section class="video-section">
+            <h2 class="video-title">My Journey in AI</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ai_journey_video_id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section class="video-section">
+            <h2 class="video-title">Latest AI Project Demo</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ai_project_demo_id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 John Doe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const links = document.querySelectorAll('.link');
+        links.forEach(link => {
+            link.addEventListener('mouseover', (e) => {
+                e.target.style.backgroundColor = var(--accent-color);
+            });
+            link.addEventListener('mouseout', (e) => {
+                e.target.style.backgroundColor = '';
+            });
+        });
+
+        // Add a subtle animation to the profile photo
+        const profilePhoto = document.querySelector('.profile-photo');
+        profilePhoto.style.transition = 'transform 0.3s ease';
+        profilePhoto.addEventListener('mouseover', () => {
+            profilePhoto.style.transform = 'scale(1.05)';
+        });
+        profilePhoto.addEventListener('mouseout', () => {
+            profilePhoto.style.transform = 'scale(1)';
+        });
+
+        // Lazy load videos
+        const videoContainers = document.querySelectorAll('.video-container');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const iframe = entry.target.querySelector('iframe');
+                    const src = iframe.getAttribute('data-src');
+                    iframe.setAttribute('src', src);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        videoContainers.forEach(container => {
+            observer.observe(container);
+        });
+    });
+    </script>
+</body></html>
